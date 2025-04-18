@@ -11,7 +11,7 @@
 [Merece](https://nivelton.github.io/Ruiiva/Declarações/Merece.html)<br>
 [Quadros](https://nivelton.github.io/Ruiiva/Declarações/Quadros.html)<br>
 [texto](https://nivelton.github.io/Ruiiva/Declarações/texto.html)<br>
-[Foto](https://nivelton.github.io/Ruiiva/Sitefofto/foto.html)<br>
+[Foto](https://nivelton.github.io/Ruiiva/Sitefoto/foto.html)<br>
 [Disney](https://nivelton.github.io/Ruiiva/TeamoemDisney/Capa.html)<br>
 [Marvel 2.0](https://nivelton.github.io/Ruiiva/TeamoemMarvel2.0/Capa.html)<br>
 [Marvel](https://nivelton.github.io/Ruiiva/TeamoemMarvel/Capa.html)<br>
