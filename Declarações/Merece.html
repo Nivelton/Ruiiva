@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Especial</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #message {
+          font-family: Times New Roman;
+            display: none;
+            margin: 20px;
+            font-size: 1.2em;
+            color: blue;
+        }
+        .medal {
+            display: none;
+            position: relative;
+            width: 100px;
+            height: 150px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .medal::before, .medal::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 80px;
+            background: linear-gradient(to left, #ff0000, #0000ff, white); /* De branco para azul, para vermelho */
+            border: 2px solid #d4a020;
+        }
+        .medal::before {
+            transform: translateX(-70%);
+        }
+        .medal::after {
+            transform: translateX(-30%);
+        }
+        .medal .circle {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background-color: #ffd700; /* Dourado */
+            border: 5px solid #d4a020;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #d4a020;
+        }
+        .medal.clicked .circle {
+            animation: shine 1s infinite;
+        }
+        @keyframes shine {
+            0% { box-shadow: 0 0 5px #d4a020; }
+            50% { box-shadow: 0 0 20px #d4a020; }
+            100% { box-shadow: 0 0 5px #d4a020; }
+        }
+        #button {
+            padding: 15px 30px;
+            font-size: 1em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #button:active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="button" onclick="showMessage()">Clica e receba</button>
+        <div id="message">
+            Uma medalha pelo quanto você se esforça todos os dias, você é uma pessoa especial, eu tentarei sempre estar presente para te incentivar em todos os momentos, você brilha muito e sempre brilhará!
+            <br><br>
+Tenho muitoooo orgulho de você <br> 
+<p>TE AMOR AMO Srta. Jóia</p>
+        </div>
+        <div class="medal" onclick="animateMedal()">
+            <div class="circle">#1</div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('button').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+            document.querySelector('.medal').style.display = 'block';
+        }
+
+        function animateMedal() {
+            const medal = document.querySelector('.medal');
+            medal.classList.add('clicked');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinito</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        h1 {
+            text-align: center; 
+            margin: 60px 0;
+            font-size: 30px;
+            color: white;
+        }
+        img{
+            display: block; 
+            margin: 0 auto; 
+            max-width: 100%; 
+            height: auto; 
+        }
+        .infinity {
+            color: white;
+            font-size: 90px;
+            position: absolute;
+            left: 40%;
+            bottom: 0;
+            transform: translateX(-50%);
+            animation: moveInfinity 1s infinite alternate; 
+        }
+        @keyframes moveInfinity {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Não consegui calcular o tamanho do meu amor por você</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR5t1VPKfDf7YXYpptNl94IsATwknd3HlNV7Hqo6ynReM7cfOuBbWUYCrI&s=10" alt="Gato">
+    <h1>O Infinito é incalculável...</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="infinity">∞</div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oii Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        .audio-container {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .bloco-1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .imagem img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .titulo {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .titulo-2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .sla {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .lista {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px;
+        }
+
+        .lista li {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .conteiner-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .item-galeria {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-galeria {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-container">
+        <audio class="musica" controls>
+            <source src="Henrique e Juliano - VEM PRA MINHA VIDA.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio tag.
+        </audio>
+    </div>
+
+
+        <h1 class="titulo">Olá be, fiz esse site pra te falar que eu te AMOOOOOOOOOOO</h1>
+        <h2 class="titulo-2">porque te amar?</h2>
+
+        <div class="sla">
+            <ol class="lista">
+                <li>Esperta🤓</li>
+                <li>Fofinha🤗</li>
+                <li>Amorosa💕</li>
+                <li>Engraçada😁</li>
+                <li>Linda😍</li>
+                <li>Atenciosa😙</li>
+            </ol>
+            <ol class="lista">
+                <li>Carinhosa🥰</li>
+                <li>Companheira💑</li>
+                <li>Divertida😂</li>
+                <li>Forte😎</li>
+                <li>Inteligente🤓</li>
+                <li>Paciente🤗</li>
+            </ol>
+        </div>
+        <h2 class="titulo-2">Entre outras infinitas qualidades🤭</h2>
+        <h2 class="titulo-2">Algumas fotos nossas que eu amo💖</h2>
+    </div>
+
+    <div class="conteiner-galeria">
+        <div class="item-galeria">
+            <img src="fotos/1.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/2.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/3.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/4.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/5.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/6.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/7.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/8.jpg" alt="" class="img-galeria">
+        </div>
+        <div class="item-galeria">
+            <img src="fotos/9.jpg" alt="" class="img-galeria">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.querySelector('.musica');
+            audio.currentTime = 62; 
+        });
+    </script>
+</body>
+</html>

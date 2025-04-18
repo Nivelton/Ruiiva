@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Formas de Eu Te Amo em Disney</title>
+    <style>
+        body {
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid #000;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: relative; /* Adicionado para posicionar as áreas clicáveis */
+            overflow: hidden; /* Adicionado para habilitar o deslize em dispositivos móveis */
+        }
+
+        .image-container, .personagem-container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            padding-right: 15px; /* Adiciona espaço ao lado direito da imagem */
+        }
+
+        .image-container img {
+            width: 115%; /* Ajusta o tamanho da imagem */
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0px; /* Adiciona espaço ao redor da imagem */
+        }
+
+        .personagem-container {
+            border-left: 1px solid #000;
+            padding-left: 20px;
+        }
+
+        .personagem {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .personagem img {
+            width: 185px;
+            height: auto;
+        }
+
+        .personagem h2 {
+            margin: 10px 0 5px;
+            color: white;
+            background-color: #d0d0d0d0;
+        }
+
+        .personagem p {
+            color: black;
+            font-size: 20px;
+            background-color: #d0d0d0d0;
+        }
+
+        .personagem:first-child {
+            display: block;
+        }
+
+        /* Áreas clicáveis */
+        .area-clicavel {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-color: transparent;
+        }
+
+        .area-clicavel-esquerda {
+            left: 0;
+        }
+
+        .area-clicavel-direita {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main-container" style="background-image: url('RIO_animacao_2011.jpg');">
+        <div class="image-container">
+            <img id="user-photo" src="1.jpg" alt="Sua Foto">
+        </div>
+        <div class="personagem-container">
+            <div class="personagem" id="personagem-1">
+                <p style="color: rgb(243, 2, 167);">"Ficou maluco? <br>
+                    O que você está fazendo?"</p>
+                <img src="a.jpg" alt="Personagem 1">
+                <P style="color: blue;">"Eu não vou deixar você não, somos araras acorrentadas, esqueceu?"</p>
+            </div>
+            <div class="personagem" id="personagem-2">
+                <p style="color: rgb(243, 2, 167);">"Por que você voltou?"</p>
+                <img src="https://i1.sndcdn.com/artworks-yDtO5oMEJiaCn4Og-uRO3wQ-t500x500.jpg" alt="Personagem 2">
+                <P style="color: blue;">"Porque você é meu tchan."</p>
+            </div>
+            <div class="personagem" id="personagem-3">
+                <P>"Quando eu te conheci, eu achei que estava me afogando, mas essa luz dentro de você me fez sentir tão vivo,</p>
+                <img src="https://disneyplusbrasil.com.br/wp-content/uploads/2023/09/Faisca-e-Gota-Elementos.jpg" alt="Personagem 3">
+                <P> e tudo o que eu quero agora é ficar perto dela, perto de você, juntos"</p>
+            </div>
+            <div class="personagem" id="personagem-4">
+                <P>"Meus erros me levaram até você, por isso, eu erraria e faria tudo de novo"</p>
+                <img src="https://i.pinimg.com/236x/67/44/9d/67449d9f01614013f1a10f8286fdb5b3.jpg" alt="Personagem 4">
+            </div>
+            <div class="personagem" id="personagem-5">
+                <p>"Amar é colocar as necessidades de alguém acima das suas"</p>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ef46758-4aca-453e-b998-53b40317c758/ddxxr6r-d1c6115f-afbb-4613-9ca7-1583faa08987.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlZjQ2NzU4LTRhY2EtNDUzZS1iOTk4LTUzYjQwMzE3Yzc1OFwvZGR4eHI2ci1kMWM2MTE1Zi1hZmJiLTQ2MTMtOWNhNy0xNTgzZmFhMDg5ODcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NHjmJm3E8eFQEUyhFFaFz2qDBjuYF6Oai2DolcbliRo" alt="Personagem 5">
+            </div>
+            <div class="personagem" id="personagem-6">
+                <p style="color: rgb(243, 2, 167);">"Olaf, você esta derretendo!!"</p>
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT-OmNI9SEkvy9rdetuukmFI3WpemVLsMkkMRMkn1cdPZIT9iNc" alt="Personagem 6">
+                <p style="color: blue;">"Por umas pessoas vale a pena"</p>
+            </div>
+            <div class="personagem" id="personagem-7">
+                <p>"Meu sonho não seria completo sem você"</p>
+                <img src="https://cinema10.com.br/upload/filmes/filmes_560_A%20Princesa%20e%20o%20Sapo%205.jpg" alt="Personagem 7">
+                <p style="color: rgb(243, 2, 167);">"Eu te amo!"</p>
+                <p style="color: blue;">"Com todas as falhas?"</p>
+                <p style="color: rgb(243, 2, 167);">"Com todas as falhas."</p>
+            </div>
+        </div>
+        <!-- Áreas clicáveis -->
+        <div class="area-clicavel area-clicavel-esquerda" id="area-esquerda"></div>
+        <div class="area-clicavel area-clicavel-direita" id="area-direita"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            // Detecta quando o usuário começa a tocar na tela
+            document.getElementById('main-container').addEventListener('touchstart', (event) => {
+                touchStartX = event.touches[0].clientX;
+            });
+
+            // Detecta quando o usuário termina de tocar na tela
+            document.getElementById('main-container').addEventListener('touchend', (event) => {
+                touchEndX = event.changedTouches[0].clientX;
+                handleGesture();
+            });
+
+            // Lida com o gesto de deslizar
+            function handleGesture() {
+                if (touchEndX < touchStartX) {
+                    // Deslizou da esquerda para a direita (avançar)
+                    mostrarProximoPersonagem();
+                } else if (touchEndX > touchStartX) {
+                    // Deslizou da direita para a esquerda (voltar)
+                    mostrarPersonagemAnterior();
+                }
+            }
+
+            let indicePersonagemAtual = 0;
+            const personagens = document.querySelectorAll('.personagem');
+            const fotos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"];
+            const backgrounds = [
+                "url('https://educacaopublica.cecierj.edu.br/122022/c19c93bca536cfd0fdd5bea2bf1747fc.png')",
+                "url('https://static.wixstatic.com/media/7e1518_ad72563079434153b1e39e80f3829482~mv2.jpg/v1/fill/w_1000,h_521,al_c,q_85,usm_0.66_1.00_0.01/7e1518_ad72563079434153b1e39e80f3829482~mv2.jpg')",
+                "url('https://disneyplusbrasil.com.br/wp-content/uploads/2023/04/Elementos-Pixar-Faisca-e-Gota.jpg')",
+                "url('https://miro.medium.com/v2/resize:fit:1400/0*vxQGIGuBxxnfvc0U.jpg')",
+                "url('https://lumiere-a.akamaihd.net/v1/images/kristoff-and-anna-from-frozen_quotes_92ab058d.jpeg?region=0,23,1000,400')",
+                "url('https://disneyplusbrasil.com.br/wp-content/uploads/2020/12/Natal-em-Arendelle-1-1024x576.jpg')",
+                "url('https://rotadeferias.com.br/wp-content/uploads/2022/12/unnamed-19.jpg')",
+            ];
+            const fotoUsuario = document.getElementById('user-photo');
+            const mainContainer = document.getElementById('main-container');
+
+            function mostrarProximoPersonagem() {
+                personagens[indicePersonagemAtual].style.display = 'none';
+                indicePersonagemAtual = (indicePersonagemAtual + 1) % personagens.length;
+                personagens[indicePersonagemAtual].style.display = 'block';
+                fotoUsuario.src = fotos[indicePersonagemAtual];
+                mainContainer.style.backgroundImage = backgrounds[indicePersonagemAtual];
+            }
+
+            function mostrarPersonagemAnterior() {
+                personagens[indicePersonagemAtual].style.display = 'none';
+                indicePersonagemAtual = (indicePersonagemAtual - 1 + personagens.length) % personagens.length;
+                personagens[indicePersonagemAtual].style.display = 'block';
+                fotoUsuario.src = fotos[indicePersonagemAtual];
+                mainContainer.style.backgroundImage = backgrounds[indicePersonagemAtual];
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> <3 </title>
+<style>
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    overflow: hidden;
+  }
+  #messageBox {
+    display: none;
+  }
+
+  .aqui {
+    background-color: blue;
+    color: white;
+    margin-left: 40%;
+    margin-top: 20%;
+    font-size: 35px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+
+  .aqui:hover {
+    background-color: darkblue;
+  }
+
+  .messageButton {
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .messageButton:hover {
+    color: darkblue;
+  }
+
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  /* Adicionando media queries */
+  @media only screen and (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    body {
+      font-size: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button id="proposalButton" class="aqui" onclick="startProposal()">clique em mim</button>
+
+<div id="messageBox">
+  <h2>Escolha uma mensagem para mim:</h2>
+  <button class="messageButton" onclick="showMessage(1)">1</button>
+  <button class="messageButton" onclick="showMessage(2)">2</button>
+  <button class="messageButton" onclick="showMessage(3)">3</button>
+</div>
+
+<!-- Particles.js -->
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  var clickedMessages = {
+    "1": false,
+    "2": false,
+    "3": false
+  };
+
+  function startProposal() {
+    var proposalButton = document.getElementById("proposalButton");
+    proposalButton.style.display = "none";
+
+    var option = confirm("Você aceita ser minha para sempre?");
+    if (!option) {
+      alert("VAI ACEITAR SIM DESGRAMA ❤️ \n TE AMO MEU AMOR,\n VOCÊ É MEU MAIOR PRESENTE\n NÃO ME DEIXE");
+      proposalButton.style.display = "block"; // Mostrar o botão novamente se o usuário clicar em "Não"
+    } else {
+      document.getElementById("messageBox").style.display = "block";
+      alert("Oooowwwntttt\n\nTE AMO, Mariana! ❤️");
+    }
+  }
+
+  function showMessage(option) {
+    var message;
+    switch (option) {
+      case 1:
+        message = "Eu sou grato por você estar ao meu lado, você é o meu maior presente!";
+        clickedMessages["1"] = true;
+        break;
+      case 2:
+        message = "Você é a minha inspiração, tudo o que faço, faço pensando em você.";
+        clickedMessages["2"] = true;
+        break;
+      case 3:
+        message = "Você torna a minha vida mais feliz, sua presença é o meu maior presente!";
+        clickedMessages["3"] = true;
+        break;
+      default:
+        message = "Opção inválida! Por favor, escolha uma opção válida.";
+    }
+    alert(message);
+
+    // Verificar se todos os textos foram clicados
+    if (clickedMessages["1"] && clickedMessages["2"] && clickedMessages["3"]) {
+      alert("São poucos textos, mas são todos de coração! Te amoo Mariana ❤️"); // Mostrar mensagem de aviso
+      // Ativar os fogos de artifício
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 100,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+           
+
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
+    }
+  }
+</script>
+</body>
+</html>

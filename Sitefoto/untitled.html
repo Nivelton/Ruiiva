@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amorzinho</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primarycolor: #cc99cc;
+  --secundarycolor: #f4f4f4;
+  --tertiarycolor: #140f19;
+  --hovercolor: #30243b;
+  --primaryfont:"Arimo", sans-serif;
+  --secundaryfont: "Public Sans", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--tertiarycolor);
+  color: var(--secundarycolor);
+}
+
+.cabecalho {
+padding: 2% 0% 2% 15%;
+}
+
+.cabecalho__menu {
+  display: flex;
+  gap: 6%;
+}
+
+.cabecalho__menu__link {
+  color: var(--primarycolor);
+  font-family: var(--secundaryfont);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+  font-weight: 600;
+  color: var(--secundarycolor);
+  text-decoration: none;
+  border-bottom: solid;
+  border-color: var(--secundarycolor);
+}
+
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apresentacao__conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 5% 0% 3% 0%;
+}
+
+.apresentacao__conteudoinvertido {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  padding: 5% 0% 3% 0%;
+}
+
+.apresentacao__imagem {
+  width: 30%;
+  border-radius: 4%;  
+}
+
+.apresentacao__conteudo__texto {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  gap: 2rem;
+}
+
+.apresentacao__conteudo__titulo {
+  font-size: 2.5rem;
+  font-family: var(--primaryfont);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--secundarycolor);
+}
+
+.apresentacao__conteudo__subtitulo {
+  font-size: 1.5rem;
+  font-family: var(--primaryfont);
+  color: var(--primarycolor);
+}
+
+.h1-destaque {
+  color: var(--primarycolor);
+  font-weight: bold;
+}
+
+.apresentacao__conteudo__paragrafo {
+  font-size: 1.5rem;
+  color: var(--secundarycolor);
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+}
+
+.apresentacao__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;  
+}
+
+.apresentacao__links__link {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  border: 2px solid var(--primarycolor);
+  border-radius: 10px;
+  color: var(--secundarycolor);
+  width: 60%;
+  text-align: center;
+  font-family: var(--secundaryfont);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 3% 0;
+}
+
+.apresentacao__links__link:hover {
+  background-color: var(--hovercolor);
+  border: 3px solid var(--primarycolor);
+  border-radius: 16px;
+  width: 70%;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.apresentacao__curriculo__itens {
+  display: flex;
+  gap: 10%;
+}
+
+.rodape {
+  background-color: var(--hovercolor);
+  color: var(--secundarycolor);
+  text-align: center;
+  padding: 1%;
+  font-family: var(--secundaryfont);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .cabecalho {
+    padding: 10%;
+    }
+
+    .cabecalho__menu {
+    justify-content: center;
+    }
+
+    .cabecalho__menu__link {
+      font-size: 1.25rem;
+    }
+
+  .apresentacao {
+    padding: 10%;
+  }
+
+  .apresentacao__conteudo {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+
+  .apresentacao__conteudoinvertido {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+
+  .apresentacao__conteudo__texto {
+    width: 100%;
+    padding: 12% 0% 15% 0%;
+    gap: 1.5rem;
+  }
+
+  .apresentacao__conteudo__titulo {
+    font-size: 2rem;
+  }
+
+  .apresentacao__conteudo__paragrafo {
+    font-size: 1.4rem;
+  }
+
+  .apresentacao__links__link {
+    width: 80%;
+    padding: 4% 0;
+  }
+
+  .apresentacao__links__link:hover {
+    width: 85%;
+  }
+
+  .apresentacao__imagem {
+    width: 100%;
+  }
+
+  .rodape {
+    padding: 6% 0%;
+    font-weight: 300;
+  }
+}
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <div class="apresentacao__conteudo__texto">
+                <h1 class="apresentacao__conteudo__titulo">Para o meu<br> <strong class="h1-destaque">Amorzinho</strong></h1>
+                <p class="apresentacao__conteudo__paragrafo">
+                Porque nem uma coleção de estrelas,
+                teria tanto brilho<br>
+                quanto um olhar seu
+                </p>
+            </div>
+            <img class="apresentacao__imagem" src="1.jpg" alt="foto de um casal apaixonado">
+        </section>
+        <section class="apresentacao__conteudoinvertido">
+            <div class="apresentacao__conteudo__texto">
+                <h1 class="apresentacao__conteudo__titulo"><strong class="h1-destaque">Presente</strong></h1>
+                <p class="apresentacao__conteudo__paragrafo">
+                  Essa foto é maravilhosa, foi o presente surpresa no dia das mulheres
+                </p>
+            </div>
+            <img class="apresentacao__imagem" src="2.jpg" alt="foto de um casal se beijando">
+        </section>
+        <section class="apresentacao__conteudo">
+            <div class="apresentacao__conteudo__texto">
+                <h1 class="apresentacao__conteudo__titulo">Um role<br> <strong class="h1-destaque">pós role</strong></h1>
+                <p class="apresentacao__conteudo__paragrafo">
+                Foi aqui que você conheceu meus amigos
+                </p>
+            </div>
+            <img class="apresentacao__imagem" src="3.jpg" alt="foto de um casal apaixonado">
+        </section>
+        <section class="apresentacao__conteudoinvertido">
+            <div class="apresentacao__conteudo__texto">
+                <h1 class="apresentacao__conteudo__titulo"><strong class="h1-destaque">Nossa playlist</strong></h1>
+                <a class="apresentacao__links__link" href="https://open.spotify.com/playlist/1WjnX7Zf7DdMyJjroZj1rn?si=bf4c2a338ef5495b">
+                    Abrir playlist
+                </a>
+            </div>
+            <img class="apresentacao__imagem" src="a.jpg" alt="capa do album">
+        </section>
+        <section class="apresentacao__conteudo">
+            <div class="apresentacao__conteudo__texto">
+                <h1 class="apresentacao__conteudo__titulo">Nossos<br> <strong class="h1-destaque">Momentos</strong></h1>
+                <p class="apresentacao__conteudo__paragrafo">
+                    Acho incrível como existem muitos momentos maravilhosos em que não tiramos foto alguma, mas, mesmo assim, temos muitas fotos juntos em momentos muito felizes.</p>
+                <p class="apresentacao__conteudo__paragrafo">
+                    Gosto muito de como estamos sempre bem juntinhos nas fotos. Você é meu grude, amorzinho.
+                </p>
+            </div>
+            <img class="apresentacao__imagem" src="5.jpg" alt="foto de um casal apaixonado">
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>Feito com muito amor</p>
+    </footer>
+</body>
+</html>

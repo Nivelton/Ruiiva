@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascripts</title>
+    <style>
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .love-message {
+            color: green;
+            display: flex;
+            align-items: center;
+        }
+        .mushroom-icon {
+            width: 30px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            margin-right: 5px;
+        }
+        .star-icon {
+            width: 20px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="clicou()">Clique em mim para receber amor</a>
+    <div id="saida"></div>
+    <!-- Áudio do Mario Powerup -->
+    <audio id="audio-mario" src="1up.mp3"></audio>
+
+    <script>
+        function clicou() {
+            var s = window.document.getElementById("saida");
+            var mushroomIcon = '<img src="b.png" alt="1UP" class="mushroom-icon">';
+            var message = '<p class="love-message">' + mushroomIcon + '1UP de amor!</p>';
+            s.innerHTML += message;
+            
+            // Reproduzir o som do Mario
+            var audio = document.getElementById('audio-mario');
+            if (audio) {
+                audio.play();
+            }
+        }
+    </script>
+</body>
+</html>

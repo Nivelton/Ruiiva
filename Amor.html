@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cartas não enviadas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Patrick Hand', cursive;
+    }
+
+    body {
+      margin: 0;
+      background-color: #fad7df;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container-carta {
+      position: relative;
+    }
+
+    .tampa {
+      position: absolute;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-top: 100px solid #fe3334;
+      border-bottom: 100px solid transparent;
+      transition: transform 0.75s;
+      transform-origin: top;
+      z-index: 1;
+    }
+
+    .papel {
+      position: absolute;
+      padding: 1.5rem;
+      line-height: 2rem;
+      right: 5px;
+      z-index: -1;
+      background: white;
+      width: 390px;
+      height: 180px;
+      transition: all 0.75s;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .corpo-carta {
+      border-left: 200px solid #ff989e;
+      border-right: 200px solid #ff989e;
+      border-top: 100px solid transparent;
+      border-bottom: 100px solid #ff858a;
+    }
+
+    .abrir-tampa {
+      transform: rotatex(180deg);
+    }
+
+    .abrir-papel {
+      animation: abrirPapel 0.5s forwards;
+    }
+
+    @keyframes abrirPapel {
+      0% { top: 0; }
+      100% { top: -120px; }
+    }
+
+    .fechar-papel {
+      animation: fecharPapel 0.5s forwards;
+    }
+
+    @keyframes fecharPapel {
+      0% { top: -120px; }
+      100% { top: 0; }
+    }
+
+    .coracao {
+      display: none;
+      position: absolute;
+      top: 25%;
+      left: 46.5%;
+      font-size: 3rem;
+      color: #fe3334;
+      animation: crescer 1s forwards;
+    }
+
+    @keyframes crescer {
+      0% { scale: 1; opacity: 1; }
+      100% { scale: 3; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container-carta" id="carta">
+      <div class="tampa"></div>
+      <span class="coracao">♥</span>
+      <p class="papel" id="mensagemPrincipal"></p>
+      <div class="corpo-carta"></div>
+    </div>
+  </main>
+
+  <script>
+    const frases = [
+      "Tu não tem noção do quanto espero para passar alguns minutos contigo e admirar esses teus olhos bonitos e esse teu sorriso que me faz esquecer de tudo",
+      "Me diga todas as coisas terríveis que você ja fez e me deixe te amar mesmo assim",
+      "Seus olhos são tão lindos quanto uma noite estrelada",
+      "Há algo em você que acho viciante..., talvez o seu sorriso, o seu olhar, a sua voz, os seus lindos olhinhos ou talvez tudo junto ... (Eu gosto de tudo em você.)",
+      "Temos que nos procurar em outras vidas, porque uma só vida será pouco pra nós.",
+      "Você é o meu lugar favorito no mundo inteiro.",
+      "Te amar é a melhor parte dos meus dias.",
+      "Meu coração sorri toda vez que penso em você.",
+      "Com você, cada momento vira eternidade.",
+      "Seu amor é o meu combustível diário.",
+      "Você é meu sonho bom de toda noite.",
+      "Seu abraço é o lugar onde o mundo faz sentido.",
+      "Não olho pra trás, só pra frente… porque é lá que você está",
+    ];
+
+    const carta = document.getElementById('carta');
+    const tampa = carta.querySelector('.tampa');
+    const papel = carta.querySelector('.papel');
+    const coracao = carta.querySelector('.coracao');
+
+    let aberta = false;
+    let fraseAtual = 0;
+
+    carta.addEventListener('click', () => {
+      if (!aberta) {
+        aberta = true;
+        tampa.classList.add('abrir-tampa');
+        setTimeout(() => {
+          tampa.style.zIndex = -1;
+          papel.classList.remove('fechar-papel');
+          papel.classList.add('abrir-papel');
+          papel.textContent = frases[fraseAtual];
+          coracao.style.display = 'block';
+          fraseAtual = (fraseAtual + 1) % frases.length;
+        }, 500);
+      } else {
+        aberta = false;
+        papel.classList.remove('abrir-papel');
+        papel.classList.add('fechar-papel');
+        setTimeout(() => {
+          tampa.style.zIndex = 1;
+          tampa.classList.remove('abrir-tampa');
+          papel.textContent = "";
+          coracao.style.display = 'none';
+        }, 500);
+      }
+    });
+  </script>
+</body>
+</html>

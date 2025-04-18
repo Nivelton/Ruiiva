@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Formas de Eu Te Amo em Marvel</title>
+    <style>
+        body {
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid #000;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image-container, .hero-container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            padding-right: 15px; /* Adiciona espaço ao lado direito da imagem */
+        }
+
+        .image-container img {
+            width: 115%; /* Ajusta o tamanho da imagem */
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0px; /* Adiciona espaço ao redor da imagem */
+        }
+
+        .hero-container {
+            border-left: 1px solid #000;
+            padding-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .hero img {
+            width: 185px;
+            height: auto;
+        }
+
+        .hero h2 {
+            margin: 10px 0 5px;
+            color: white;
+            background-color: #d0d0d0;
+        }
+
+        .hero p {
+            color: black;
+            font-size: 20px;
+            background-color: #d0d0d0;
+        }
+
+        .hero:first-child {
+            display: block;
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 40px;
+            font-size: 30px;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main-container" style="background-image: url('i.jpeg');">
+        <div class="image-container">
+            <img id="user-photo" src="1.jpg" alt="Sua Foto">
+        </div>
+        <div class="hero-container">
+            <div class="hero" id="hero-1">
+                <h2>Doutor Estranho</h2>
+                <img src="https://i.pinimg.com/originals/ef/1e/87/ef1e8740c12e6505ad3a353d876e26a0.png" alt="Herói 1">
+                <p>Eu te amo, eu te amo em cada universo.</p>
+            </div>
+            <div class="hero" id="hero-2">
+                <h2>Homem de Ferro</h2>
+                <img src="https://i.pinimg.com/originals/2c/a2/1d/2ca21dc1e34bffd3972a2db78682f9a5.png" alt="Herói 2">
+                <p>Eu te amo mil milhões.</p>
+            </div>
+            <div class="hero" id="hero-3">
+                <h2>Homem Aranha</h2>
+                <img src="https://gifs.eco.br/wp-content/uploads/2023/02/imagens-de-homem-aranha-andrew-garfield-png-6-629x1024.png" alt="Herói 3">
+                <p>Você é a minha direção <br> e você sempre vai ser a minha direção.</p>
+            </div>
+            <div class="hero" id="hero-4">
+                <h2>Thor</h2>
+                <img src="https://i.pinimg.com/originals/42/12/c1/4212c1dfb00e7f033bfd889f64bb1161.png" alt="Herói 4">
+                <p>Você me fez digno</p>
+            </div>
+            <div class="hero" id="hero-5">
+                <h2>Wanda</h2>
+                <img src="https://i.pinimg.com/originals/b9/d5/e4/b9d5e40dc6f6f0af1a8e4c74f666b965.png" alt="Herói 5">
+                <p>É só você que eu sinto.</p>
+            </div>
+            <div class="hero" id="hero-6">
+                <h2>Capitão América</h2>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRMbqH_hzcS3Zgov4dshkJrIkFfTDsU5ZSxK6ydiXusqOpfTeBOM3zlCbTNAwdFfuRr17KCJNuFKHzS1pZxnNZX8wbQpA6bdfwbrYecFh1og16Nen37EVrGxarz7FJdXdTuAAcONRlA1m4/s1600/captain_america_by_cptcommunist-da55g3v.png" alt="Herói 6">
+                <p>Se precisar de mim, eu estarei lá..</p>
+            </div>
+            <div class="hero" id="hero-7">
+                <h2>Loki</h2>
+                <img src="https://pngfre.com/wp-content/uploads/loki-41-999x1024.png" alt="Herói 7">
+                <p>Eu só quero que você fique bem.</p>
+            </div>
+        </div>
+    </div>
+    <audio id="hero-audio"></audio>
+    <button class="play-button" id="play-button">ouvir</button>
+    <script>
+        let indiceHeroiAtual = 0;
+        const herois = document.querySelectorAll('.hero');
+        const fotos = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"];
+        const backgrounds = [
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5Ae14FE1bcnHX8Rs8W856Y7EUIgOyQxYT4D9LW1XPPteevG1aKdmSkw&s=10')",
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkatY7AQXF6ruwffkBwNXMhIT3ppL1Gbh0aQmjOoKGIYE4IUZ0Keygg4xC&s=10')",
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz-0TwZRJ8AMg0l_AKxAkzB7401kjBEGNE4A&usqp=CAU')",
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT35-tEAVIW1Tz8Roo3N4U2fyqX6Ose3E4fFw&usqp=CAU')",
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKkHFGklwzhhZYgqj0Hi2ULYA9kzgONzUT6MB8mWaHVYE71_EAoOSxQK8&s=10')",
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe5sThO8Rv_FeHU3q0d9-3iXCFkTEc8fO-cK1yqdipPYyuwkGfSiqaSmw&s=10')",
+            "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlLBPBZVtagbdK9TrgGW3juoBiIH7ef3af9A&usqp=CAU')",
+            "url('bg8.jpg')"
+        ];
+        const musicas = ["1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3", "6.mp3", "7.mp3"];
+        const fotoUsuario = document.getElementById('user-photo');
+        const mainContainer = document.getElementById('main-container');
+        const audioPlayer = document.getElementById('hero-audio');
+        const playButton = document.getElementById('play-button');
+
+        playButton.addEventListener('click', () => {
+            audioPlayer.src = musicas[indiceHeroiAtual];
+            audioPlayer.play();
+            playButton.style.display = 'none'; // Esconde o botão após o primeiro clique
+        });
+
+        function mostrarProximoHeroi() {
+            herois[indiceHeroiAtual].style.display = 'none';
+            indiceHeroiAtual = (indiceHeroiAtual + 1) % herois.length;
+            herois[indiceHeroiAtual].style.display = 'block';
+            fotoUsuario.src = fotos[indiceHeroiAtual];
+            mainContainer.style.backgroundImage = backgrounds[indiceHeroiAtual];
+            audioPlayer.src = musicas[indiceHeroiAtual];
+            audioPlayer.play();
+        }
+
+        document.addEventListener('click', (e) => {
+            const screenWidth = window.innerWidth;
+            const clickX = e.clientX;
+
+            if (clickX > screenWidth * 0.8) { // Considerando o lado direito como os 20% finais da tela
+                mostrarProximoHeroi();
+            }
+        });
+    </script>
+</body>
+</html>
