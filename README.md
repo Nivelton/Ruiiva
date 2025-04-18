@@ -10,7 +10,6 @@
 [Girassóis](https://nivelton.github.io/Ruiiva/Declarações/Girassóis.html)<br>
 [Merece](https://nivelton.github.io/Ruiiva/Declarações/Merece.html)<br>
 [Quadros](https://nivelton.github.io/Ruiiva/Declarações/Quadros.html)<br>
-[Rosa](https://nivelton.github.io/Ruiiva/Declarações/Rosa.html)<br>
 [texto](https://nivelton.github.io/Ruiiva/Declarações/texto.html)<br>
 [Foto](https://nivelton.github.io/Ruiiva/Sitefofto/foto.html)<br>
 [Disney](https://nivelton.github.io/Ruiiva/Teamoemdisney/Capa.html)<br>
