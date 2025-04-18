@@ -1,7 +1,7 @@
 # Ruiiva
- 
-[Acessar 1UP](https://nivelton.github.io/Ruiiva/1UP/1up.html)<br>
-[Acessar Texto](https://nivelton.github.io/Ruiiva/Declarações/Texto/Part1.html)<br>
+ [Acessar] (https://nivelton.github.io/Ruiiva/)
+[1UP](https://nivelton.github.io/Ruiiva/1UP/1up.html)<br>
+[Texto](https://nivelton.github.io/Ruiiva/Declarações/Texto/Part1.html)<br>
 [Batimentos](https://nivelton.github.io/Ruiiva/Declarações/Batimentos.html)<br>
 [Borboletas](https://nivelton.github.io/Ruiiva/Declarações/Borboletas.html)<br>
 [Calculo](https://nivelton.github.io/Ruiiva/Declarações/Calculo.html)<br>
