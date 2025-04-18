@@ -14,5 +14,5 @@
 [Rosa](https://nivelton.github.io/Ruiiva/Declarações/Rosa.html)<br>
 [texto](https://nivelton.github.io/Ruiiva/Declarações/texto.html)<br>
 [Foto](https://nivelton.github.io/Ruiiva/Sitefofto/foto.html)<br>
-[Disney](https://nivelton.github.io/Ruiiva/Teamoemdisney/6formas.html)<br>
+[Disney](https://nivelton.github.io/Ruiiva/Teamoemdisney/Capa.html)<br>
 [ ](https://nivelton.github.io/Ruiiva/.html)<br>
