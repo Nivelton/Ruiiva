@@ -1,3 +1,3 @@
 # Ruiiva
  
-[Acessar página 1UP](https://seunome.github.io/Ruiiva/1UP/1up.html)
+[Acessar página 1UP](https://github.com/Nivelton/Ruiiva/blob/main/1UP/1up.html)
