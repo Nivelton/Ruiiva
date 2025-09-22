@@ -18,4 +18,4 @@
 [Playlist](https://nivelton.github.io/Ruiiva/site/login.html)<br>
 [Amor](https://nivelton.github.io/Ruiiva/Amor.html)<br>
 [Groot](https://nivelton.github.io/Ruiiva/Groot.html)<br>
-[](https://nivelton.github.io/Ruiiva/Índice.html)<br>
+[QR](https://nivelton.github.io/Ruiiva/Índice.html)<br>
